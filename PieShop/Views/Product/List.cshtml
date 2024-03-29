@@ -1,0 +1,32 @@
+﻿@model ProductlistViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+    </div>
+
+<h1>@Model.CurrentCategory</h1>
+
+
+<div class="card-deck">
+
+    @foreach (var item in Model.AllProduct)
+    {
+       <partial name="_PieCard" model="item" />
+    }
+
+</div>
+
+
+
